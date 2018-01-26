@@ -15,6 +15,12 @@ module.exports = function (config) {
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    files: [
+      { pattern: './example-app/test.ts', watched: false }
+    ],
+    preprocessors: {
+      './example-app/test.ts': ['@angular/cli']
+    },
     coverageIstanbulReporter: {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true

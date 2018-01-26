@@ -1,21 +1,41 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "noStrictGenericChecks": true,
     "lib": [
       "es2017",
       "dom"
     ],
-    "baseUrl": "src",
-    "paths": {}
+    "outDir": "../out-tsc/app",
+    "target": "es5",
+    "module": "commonjs",
+    "baseUrl": "",
+    "rootDir": "./",
+    "strict": true,
+    "paths": {
+      "@branding/rootstate": [
+        "./lib/rootstate"
+      ],
+      "@wonderful/project-management": [
+        "./lib/product-management"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+  },
+  "exclude": [
+    "node_modules",
+    "**/*/node_modules",
+    "modules/schematics/src/*/files/**/*"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
   }
 }

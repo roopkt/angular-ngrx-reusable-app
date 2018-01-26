@@ -1,0 +1,14 @@
+{
+  "name": "@branding/rootstate",
+  "version": "1.0.0",
+  "description": "root state",
+  "license": "MIT",
+  "private": true,
+  "author": "branding service team",
+  "peerDependencies": {},
+  "main": "bundles/rootstate.umd.js",
+  "module": "@branding/rootstate.es5.js",
+  "es2015": "@branding/rootstate.js",
+  "typings": "rootstate.d.ts",
+  "metadata": "rootstate.metadata.json"
+}

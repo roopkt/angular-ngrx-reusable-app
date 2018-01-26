@@ -1,14 +1,13 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "multiple-apps"
+    "name": "ngrx-enabled-reusable-app"
   },
   "apps": [
     {
-      "name":"demo-app",
-      "root": "src",
-      "appRoot": "demo-app",
-      "outDir": "dist",
+      "name": "example-app",
+      "root": "example-app",
+      "outDir": "example-dist",
       "assets": [
         "assets",
         "favicon.ico"
@@ -19,7 +18,7 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "demo",
+      "prefix": "wa",
       "styles": [
         "styles.css"
       ],
@@ -31,30 +30,11 @@
       }
     },
     {
-      "name":"pm",
+      "name": "lib",
       "root": "src",
-      "appRoot": "lib/release-management/src",
-      "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main-pm.ts",
-      "polyfills": "polyfills.ts",
-      "test": "test.ts",
-      "tsconfig": "tsconfig.app.json",
-      "testTsconfig": "tsconfig.spec.json",
-      "prefix": "rm",
-      "styles": [
-        "styles.css"
-      ],
-      "scripts": [],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+      "appRoot": "lib/project-management/src",
+      "outDir": "lib-dist",
+      "main": "lib/project-management/main-pm.ts"
     }
   ],
   "e2e": {
@@ -64,11 +44,11 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json",
+      "project": "example-app/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "src/tsconfig.spec.json",
+      "project": "example-app/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
     },
     {
@@ -83,6 +63,11 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "flat": true,
+      "spec": false
+    }
   }
 }
