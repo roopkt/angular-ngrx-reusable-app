@@ -1,4 +1,5 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "sourceMap": true,
     "declaration": false,
@@ -12,17 +13,14 @@
     "outDir": "../out-tsc/spec",
     "target": "es5",
     "module": "es2015",
-    "types": [
-      "jasmine",
-      "node"
-    ],
+    "types": [],
     "baseUrl": ".",
     "rootDir": "../",
     "paths": {
       "@branding/rootstate": [
         "../lib/rootstate/src"
       ],
-      "@wonderful/project-management": [
+      "@wonderful/product-management": [
         "../lib/product-management/src"
       ]
     }

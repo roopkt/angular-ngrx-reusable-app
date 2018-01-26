@@ -11,19 +11,15 @@ import { HomeContainerComponent } from './products/containers/home-container.com
 import { ProductsModule } from './products/products.module';
 import { CoreModule } from './core/core.module';
 
-import {Product } from '@wonderful/project-management';
-
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ProductsModule,
-    ProductManagementModule.
-
-      CoreModule.forRoot(),
+    CoreModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
+
     // StoreModule.forRoot(reducers)
   ],
   providers: [],

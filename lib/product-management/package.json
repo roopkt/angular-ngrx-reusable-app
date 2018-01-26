@@ -1,13 +1,10 @@
 {
   "name": "@wonderful/product-management",
-  "version": "1.0.0",
+  "version": "1.0.0-1",
   "description": "product management software",
   "license": "MIT",
   "private": true,
-  "author": "project-management-service-team",
-  "scripts":{
-    "ngc":"ngc"
-  },
+  "author": "product-management-service-team",
   "peerDependencies": {
     "@angular/animations": "5.2.0",
     "@angular/common": "5.2.0",

@@ -18,10 +18,10 @@
     "strict": true,
     "paths": {
       "@branding/rootstate": [
-        "./lib/rootstate"
+        "./lib/rootstate/src"
       ],
-      "@wonderful/project-management": [
-        "./lib/product-management"
+      "@wonderful/productmanagement": [
+        "./lib/product-management/src"
       ]
     },
     "typeRoots": [

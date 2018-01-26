@@ -1,1 +1,0 @@
-{"version":3,"file":"rootstate.js","sources":["~/@branding/rootstate/rootstate.ts"],"sourcesContent":["/**\n * Generated bundle index. Do not edit.\n */\n\nexport {State} from './public_api';\n"],"names":[],"mappings":"AAAA;;GAEG"}

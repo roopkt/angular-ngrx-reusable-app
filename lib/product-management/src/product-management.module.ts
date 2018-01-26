@@ -21,7 +21,7 @@ export const COMPONENTS = [
   exports: COMPONENTS,
 })
 export class ProductManagementModule {
-  static forRoot(settings: ProductManagementSettings = {}): ModuleWithProviders {
+  public static forFeature(settings: ProductManagementSettings = {}): ModuleWithProviders {
     return {
       ngModule: ProductManagementModule,
       providers: [
