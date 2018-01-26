@@ -1,0 +1,9 @@
+{
+  "name": "@branding/rootstate",
+  "version": "1.0.0",
+  "description": "root state",
+  "license": "MIT",
+  "private": true,
+  "author": "branding service team",
+  "peerDependencies": {}
+}
