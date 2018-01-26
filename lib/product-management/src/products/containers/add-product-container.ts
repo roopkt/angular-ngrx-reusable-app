@@ -1,7 +1,7 @@
 import { Store } from '@ngrx/store';
-import {State} from '../reducers';
-import {Add} from '../actions/product';
+import { State } from '../reducers';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Add } from '../actions/Product';
 
 @Component({
     selector: 'pm-add-product-container',

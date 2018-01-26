@@ -10,6 +10,7 @@ import { routes } from './routes';
 import { HomeContainerComponent } from './products/containers/home-container.component';
 import { ProductsModule } from './products/products.module';
 import { CoreModule } from './core/core.module';
+import { ProductManagementModule } from '@wonderful/product-management';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { CoreModule } from './core/core.module';
     HttpClientModule,
     CoreModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
-
+    ProductManagementModule.forFeature({ baseUrl: 'someurl' })
     // StoreModule.forRoot(reducers)
   ],
   providers: [],

@@ -1,4 +1,7 @@
 export class Product {
-    public id: string;
-    public name: string;
+    constructor(
+    public id: string,
+    public name: string) {
+    }
 }
+

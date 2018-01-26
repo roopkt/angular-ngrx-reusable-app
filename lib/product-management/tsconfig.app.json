@@ -10,29 +10,26 @@
       "es2017",
       "dom"
     ],
-    "outDir": "../out-tsc/app",
+    "outDir": "../out-tsc/lib/pm",
     "target": "es5",
     "module": "es2015",
     "types": [],
     "baseUrl": ".",
-    "rootDir": "../",
+    "rootDir": "../../",
     "paths": {
       "@branding/rootstate": [
-        "../lib/rootstate/src"
-      ],
-      "@wonderful/product-management": [
-        "../lib/product-management/src"
+        "../../lib/rootstate/src"
       ]
     }
   },
   "files": [
     "test.ts",
-    "main.ts",
-    "polyfills.ts"
+    "main.ts"
   ],
   "exclude": [
-    "../node_modules",
+    "../../node_modules",
     "**/*.spec.ts",
     "**/*.d.ts"
-  ]
+  ],
+  "include": [ "../../lib/product-management/src/**/*.ts" ]
 }

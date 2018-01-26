@@ -1,12 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
 
 import { ProductsModule } from '../src/products/products.module';
 import { createConfig, INITIAL_OPTIONS, PRODUCT_MANAGEMENT_CONFIG, ProductManagementSettings } from './config';
 import { AddProductContainerComponent } from './products/containers/add-product-container';
+import { reducers } from './products/reducers';
+import { AddProductComponent } from './products/components/add-product';
 
 export const COMPONENTS = [
+  AddProductContainerComponent,
+  AddProductComponent
 ];
 
 @NgModule({
@@ -14,9 +19,14 @@ export const COMPONENTS = [
     CommonModule,
     RouterModule,
     ProductsModule,
-    RouterModule.forChild([
-      { path: '', component: AddProductContainerComponent },
-    ])],
+     /**
+     * StoreModule.forFeature is used for composing state
+     * from feature modules. These modules can be loaded
+     * eagerly or lazily and will be dynamically added to
+     * the existing state.
+     */
+    StoreModule.forFeature('products', reducers)
+  ],
   declarations: COMPONENTS,
   exports: COMPONENTS,
 })

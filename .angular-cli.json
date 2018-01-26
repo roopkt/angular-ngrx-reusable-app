@@ -34,7 +34,8 @@
       "root": "src",
       "appRoot": "lib/project-management/src",
       "outDir": "lib-dist",
-      "main": "lib/project-management/main-pm.ts"
+      "main": "main.ts",
+      "tsconfig": "tsconfig.app.json"
     }
   ],
   "e2e": {
@@ -68,6 +69,9 @@
       "inlineTemplate": true,
       "flat": true,
       "spec": false
+    },
+    "build": {
+      "preserveSymlinks": true
     }
   }
 }
