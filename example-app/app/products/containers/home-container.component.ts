@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'wa-home-container',
   template: `
-  <pm-add-product-container></pm-add-product-container>
+  <div pmc-add-product></div>
   `,
   styles: []
 })

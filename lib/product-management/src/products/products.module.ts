@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 
-import { reducers } from './reducers';
-import { AddProductContainerComponent } from './containers/add-product-container';
 import { AddProductComponent } from './components/add-product';
+import { AddProductContainerComponent } from './containers/add-product-container';
+import { reducers } from './reducers';
 
 const COMPONENTS = [
     AddProductComponent,
@@ -15,7 +15,9 @@ const COMPONENTS = [
 
 @NgModule({
     imports: [
-        CommonModule,
+        RouterModule.forChild([
+            { path: '', component: AddProductContainerComponent },
+        ]),
         /**
          * StoreModule.forFeature is used for composing state
          * from feature modules. These modules can be loaded
@@ -33,6 +35,7 @@ const COMPONENTS = [
          * whether they are registered once or multiple times.
          */
         EffectsModule.forFeature([]),
+        CommonModule,
     ],
     declarations: COMPONENTS,
     providers: [],

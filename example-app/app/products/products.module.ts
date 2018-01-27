@@ -11,4 +11,4 @@ const COMPONENTS = [HomeContainerComponent];
   declarations: COMPONENTS,
   exports: COMPONENTS
 })
-export class ProductsModule { }
+export class WebProductModule { }

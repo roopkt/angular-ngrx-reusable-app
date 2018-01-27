@@ -5,6 +5,7 @@ import { Add } from '../actions/Product';
 
 @Component({
     selector: 'pm-add-product-container',
+    exportAs: 'pmcAddProduct',
     template: `
         <div>
         <pm-add-product (addProduct)="addProduct($event)"></pm-add-product>

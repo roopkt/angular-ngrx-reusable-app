@@ -5,7 +5,7 @@ import { Output } from '@angular/core';
     selector: 'pm-add-product',
     template: `
         <div>
-        <form (ngSubmit)="addProductClick($event)">
+        <form (submit)="addProductClick($event)">
             <p>Product Name:<input type="text" name="prodName" id="prodName"></p>
         </form>
         </div>
@@ -18,8 +18,9 @@ export class AddProductComponent {
     constructor(public el: ElementRef) {
 
     }
-
-    addProductClick(event) {
+    addProductClick(event: KeyboardEvent) {
+        event.stopPropagation();
+        event.preventDefault();
         const name = this.el.nativeElement.value;
         this.addProduct.emit(name);
     }

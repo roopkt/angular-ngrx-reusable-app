@@ -5,6 +5,6 @@ export const routes: Routes = [
   { path: '', redirectTo: '/products', pathMatch: 'full' },
   {
     path: 'products',
-    component: HomeContainerComponent
+    loadChildren: '@wonderful/product-management#ProductsModule',
   },
 ];
