@@ -12,7 +12,8 @@
     "build": "npm run build:lib1 && npm run build:lib2",
     "example:build:prod": "npm run build && npm ng build -prod --base-href",
     "example:start": "ng serve -p 4210",
-    "example:start:aot": "ng serve -prod -p 4210"
+    "example:start:aot": "ng serve -prod -p 4210",
+    "example:test":"ng test"
   },
   "engines": {
     "node": ">=8.6.0",
