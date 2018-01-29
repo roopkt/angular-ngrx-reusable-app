@@ -1,3 +1,4 @@
+import { HomeContainerComponent } from './products/containers/home-container.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -9,13 +10,17 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ProductManagementModule } from '@wonderful/product-management';
+import { AddProductContainerComponent } from '@wonderful/product-management';
 
 import { environment } from '../environments/environment';
 import { AppComponent } from './core/containers/app.component';
 import { CoreModule } from './core/core.module';
-import { WebProductModule } from './products/products.module';
 import { metaReducers, reducers } from './reducers';
 import { routes } from './routes';
+
+const COMPONENTS = [
+  HomeContainerComponent,
+];
 
 @NgModule({
   imports: [
@@ -23,7 +28,6 @@ import { routes } from './routes';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    WebProductModule,
     RouterModule.forRoot(routes, { useHash: true }),
 
     /**
@@ -76,5 +80,6 @@ import { routes } from './routes';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
+  declarations: COMPONENTS
 })
 export class AppModule { }

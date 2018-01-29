@@ -38,9 +38,9 @@ export function logger(reducer: ActionReducer<State>): any {
   return function (state: State, action: any): State {
     console.log('state before', state);
     console.log('action', action);
-    const nextState = reducer(state, action);
-    console.log('state after', state);
-    return nextState;
+    const stateAfter = reducer(state, action);
+    console.log('state after', stateAfter);
+    return stateAfter;
   };
 }
 

@@ -19,7 +19,7 @@ export class AddProductContainerComponent {
 
     addProduct(name: string) {
         this.store.dispatch(new Add({
-            id: Math.random().toString(),
+            id: (Math.random()).toString().substr(4),
             name: name
         }));
     }

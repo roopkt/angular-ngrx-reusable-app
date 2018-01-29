@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+// <div pmc-add-product></div>
+
 @Component({
   selector: 'wa-home-container',
   template: `
-  <div pmc-add-product></div>
+  <add-product-container></add-product-container>
   `,
   styles: []
 })
