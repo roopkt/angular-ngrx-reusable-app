@@ -8,7 +8,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ProductsModule } from '@wonderful/product-management';
+import { ProductManagementModule } from '@wonderful/product-management';
 
 import { environment } from '../environments/environment';
 import { AppComponent } from './core/containers/app.component';
@@ -69,7 +69,7 @@ import { routes } from './routes';
     EffectsModule.forRoot([]),
 
     CoreModule.forRoot(),
-    ProductsModule,
+    ProductManagementModule.forFeature({ baseUrl: 'someurl' }),
   ],
   providers: [],
   bootstrap: [AppComponent],

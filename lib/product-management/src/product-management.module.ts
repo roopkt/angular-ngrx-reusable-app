@@ -3,11 +3,10 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 
-import { ProductsModule } from '../src/products/products.module';
 import { createConfig, INITIAL_OPTIONS, PRODUCT_MANAGEMENT_CONFIG, ProductManagementSettings } from './config';
-import { AddProductContainerComponent } from './products/containers/add-product-container';
-import { reducers } from './products/reducers';
-import { AddProductComponent } from './products/components/add-product';
+import { AddProductContainerComponent } from './containers/add-product-container';
+import { reducers } from './reducers';
+import { AddProductComponent } from './components/add-product';
 
 export const COMPONENTS = [
   AddProductContainerComponent,
@@ -18,7 +17,9 @@ export const COMPONENTS = [
   imports: [
     CommonModule,
     RouterModule,
-    ProductsModule,
+    RouterModule.forChild([
+      { path: '', component: AddProductContainerComponent },
+  ]),
      /**
      * StoreModule.forFeature is used for composing state
      * from feature modules. These modules can be loaded

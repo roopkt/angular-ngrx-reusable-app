@@ -36,10 +36,11 @@ export const reducers: any = {
 // console.log all actions
 export function logger(reducer: ActionReducer<State>): any {
   return function (state: State, action: any): State {
-    console.log('state', state);
+    console.log('state before', state);
     console.log('action', action);
-
-    return reducer(state, action);
+    const nextState = reducer(state, action);
+    console.log('state after', state);
+    return nextState;
   };
 }
 
