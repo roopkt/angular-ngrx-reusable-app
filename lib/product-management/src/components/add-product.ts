@@ -17,7 +17,7 @@ export class AddProductComponent {
     @Output() addProduct = new EventEmitter();
     @ViewChild('prodName') prodName: ElementRef;
     constructor() {
-
+        
     }
     addProductClick(event: KeyboardEvent) {
         event.stopPropagation();

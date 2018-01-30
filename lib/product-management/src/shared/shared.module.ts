@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 
-export const COMPONENTS = [
+export const COMPONENTS: any[] = [
 ];
 
 @NgModule({

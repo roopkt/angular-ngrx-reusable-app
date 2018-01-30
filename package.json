@@ -14,7 +14,8 @@
     "example:start": "ng serve -p 4210",
     "example:start:aot": "ng serve -prod -p 4210",
     "example:test": "ng test",
-    "test:unit": "ng test --app=lib"
+    "test:lib:watch": "ng test --app=lib --browsers=Chrome",
+    "test:lib": "ng test --app=lib --browsers=ChromeHeadless -sr"
   },
   "engines": {
     "node": ">=8.6.0",

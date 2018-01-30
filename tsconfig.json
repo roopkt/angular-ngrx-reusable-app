@@ -27,6 +27,7 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "strictNullChecks": false
   },
   "exclude": [
     "./node_modules",
@@ -39,4 +40,5 @@
   "atom": {
     "rewriteTsconfig": false
   }
+
 }
