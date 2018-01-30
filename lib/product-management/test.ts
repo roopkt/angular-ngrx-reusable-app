@@ -1,5 +1,12 @@
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
-
+// import 'ts-node/register';
+// import 'core-js/es7/reflect';
+import 'zone.js/dist/zone-node.js';
+import 'zone.js/dist/long-stack-trace-zone.js';
+import 'zone.js/dist/proxy.js';
+import 'zone.js/dist/sync-test.js';
+import 'zone.js/dist/async-test.js';
+import 'zone.js/dist/fake-async-test.js';
 import 'zone.js/dist/zone-testing';
 import { getTestBed } from '@angular/core/testing';
 import {

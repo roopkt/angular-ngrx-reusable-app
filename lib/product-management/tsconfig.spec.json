@@ -5,24 +5,31 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noStrictGenericChecks": true,
     "lib": [
-      "es2017",
+      "es2016",
       "dom"
     ],
-    "outDir": "../out-tsc/lib/pm/spec",
+    "outDir": "../out-tsc/app",
+    "target": "es5",
     "module": "commonjs",
-    "target": "es6",
-    "types": [
-      "jasmine",
-      "node"
-    ],
-    "baseUrl": ".",
-    "rootDir": "../"
+    "baseUrl": "",
+    "rootDir": "./",
+    "strict": true,
+    "paths": {
+      "@branding/rootstate": [
+        "../rootstate/src"
+      ]
+    }
   },
-  "files": [
-    "test.ts"
+  "exclude": [
+    "node_modules",
+    "**/*/node_modules",
+    "modules/schematics/src/*/files/**/*"
   ],
-  "include": [
-    "**/*.spec.ts"
-  ]
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }

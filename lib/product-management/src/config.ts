@@ -1,7 +1,7 @@
 import { InjectionToken } from "@angular/core";
 
 export class ProductManagementConfig {
-    baseUrl: string;
+    constructor(public baseUrl: string) { }
 }
 
 export const PRODUCT_MANAGEMENT_CONFIG = new InjectionToken<ProductManagementConfig>(

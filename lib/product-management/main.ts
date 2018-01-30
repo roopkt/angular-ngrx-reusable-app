@@ -1,6 +1,5 @@
-import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { ProductsModule } from '../product-management/src/products/products.module';
+import { ProductManagementModule } from './src/product-management.module';
 
-platformBrowserDynamic().bootstrapModule(ProductsModule)
+platformBrowserDynamic().bootstrapModule(ProductManagementModule)
   .catch(err => console.log(err));
