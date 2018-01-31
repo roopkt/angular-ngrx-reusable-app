@@ -32,15 +32,14 @@
     {
       "root": "lib",
       "outDir": "dist",
-      "name":"lib",
+      "name": "lib",
       "assets": [
         "assets",
         "favicon.ico"
       ],
-      "index": "index.html",
-      "main": "main.ts",
+      "main": "product-management/main.ts",
       "test": "product-management/test.ts",
-      "tsconfig": "tsconfig.app.json",
+      "tsconfig": "product-management/tsconfig.app.json",
       "testTsconfig": "product-management/tsconfig.spec.json",
       "prefix": "pm",
       "styles": [
@@ -69,11 +68,11 @@
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "lib/product-management/src/tsconfig.app.json",
+      "project": "lib/product-management/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "lib/product-management/src/tsconfig.spec.json",
+      "project": "lib/product-management/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
     },
     {

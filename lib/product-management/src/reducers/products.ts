@@ -1,5 +1,5 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import {ProductActions, ProductActionTypes} from '../actions/Product';
+import {ProductActions, ProductActionTypes} from '../actions/product-actions';
 import { Product } from '../models/product';
 
 export interface State extends EntityState<Product> {

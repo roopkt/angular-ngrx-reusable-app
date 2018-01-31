@@ -1,7 +1,10 @@
-import { Store } from '@ngrx/store';
-import { State } from '../reducers';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Add } from '../actions/Product';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { Product } from '../models/product';
+import { Observable } from 'rxjs/Observable';
+
+import { Add, Load } from '../actions/product-actions';
+import { getAllProducts, State } from '../reducers';
 
 @Component({
     selector: 'pm-add-product-container',
@@ -13,11 +16,17 @@ import { Add } from '../actions/Product';
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AddProductContainerComponent {
+export class AddProductContainerComponent implements OnInit {
+    products$: Observable<Product[]>;
     constructor(private store: Store<State>) {
+        this.products$ = store.pipe(select(getAllProducts));
     }
 
-    addProduct(name: string) {
+    ngOnInit(): void {
+        this.store.dispatch(new Load());
+    }
+
+    addProduct(name: string): void {
         this.store.dispatch(new Add({
             id: (Math.random()).toString().substr(4),
             name: name
