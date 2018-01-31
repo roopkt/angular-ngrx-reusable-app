@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Product Page should compile 1`] = `
+<pm-add-product-container
+  products$={[Function Store]}
+  store={[Function Store]}
+>
+  
+          <div>
+    
+          
+    <pm-add-product>
+      
+          
+      <div>
+        
+          
+        <form>
+          
+              
+          <p>
+            Product Name:
+            <input
+              id="prodName"
+              name="prodName"
+              type="text"
+            />
+          </p>
+          
+          
+        </form>
+        
+          
+      </div>
+      
+      
+    </pm-add-product>
+    
+          
+  </div>
+      
+</pm-add-product-container>
+`;

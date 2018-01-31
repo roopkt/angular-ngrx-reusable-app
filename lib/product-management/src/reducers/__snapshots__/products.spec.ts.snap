@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductsReducer ADD should add a single product 1`] = `
+Object {
+  "entities": Object {
+    "2": Product {
+      "id": "2",
+      "name": "Apple",
+    },
+  },
+  "ids": Array [
+    "2",
+  ],
+  "selectedProductId": null,
+}
+`;
+
+exports[`ProductsReducer Selectors getSelectedId should return the selected id 1`] = `"2"`;
+
+exports[`ProductsReducer undefined action should return the default state 1`] = `
+Object {
+  "entities": Object {},
+  "ids": Array [],
+  "selectedProductId": null,
+}
+`;

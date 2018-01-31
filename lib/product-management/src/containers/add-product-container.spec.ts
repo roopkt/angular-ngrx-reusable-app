@@ -38,7 +38,7 @@ describe('Add Product Page', () => {
   it('should compile', () => {
     fixture.detectChanges();
 
-    // expect(fixture).toMatchSnapshot();
+    expect(fixture).toMatchSnapshot();
   });
 
   it('should dispatch a productActions.Load on init', () => {

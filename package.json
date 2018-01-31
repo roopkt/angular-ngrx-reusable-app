@@ -14,8 +14,8 @@
     "example:start": "ng serve -p 4210",
     "example:start:aot": "ng serve -prod -p 4210",
     "example:test": "ng test",
-    "test:lib:watch": "ng test --app=lib --browsers=Chrome",
-    "test:lib": "nyc --all ng test --app=lib --browsers=ChromeHeadless -sr"
+    "test:lib": "jest",
+    "test:lib:watch": "jest --watch"
   },
   "nyc": {
     "extension": [
@@ -28,6 +28,34 @@
     "include": [
       "**/*.ts",
       "./lib/**/*.ts"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setup-jest.ts",
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "lib/product-management/tsconfig.spec.json"
+      },
+      "__TRANSFORM_HTML__": true
+    },
+    "transform": {
+      "^.+\\.(ts|js|html)$": "<rootDir>/node_modules/jest-preset-angular/preprocessor.js"
+    },
+    "testMatch": [
+      "<rootDir>/lib/product-management/**/*.spec.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "html",
+      "json"
+    ],
+    "mapCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "dist"
     ]
   },
   "engines": {
@@ -64,12 +92,15 @@
     "@angular/platform-server": "5.2.2",
     "@types/jasmine": "2.8.3",
     "@types/jasminewd2": "2.0.2",
+    "@types/jest": "22.1.1",
     "@types/node": "^9.3.0",
-    "nyc": "^10.1.2",
     "codelyzer": "4.0.1",
     "jasmine-core": "2.8.0",
     "jasmine-node": "^1.14.5",
     "jasmine-spec-reporter": "4.2.1",
+    "jest": "22.1.4",
+    "jest-preset-angular": "5.0.0",
+    "jest-zone-patch": "0.0.8",
     "karma": "2.0.0",
     "karma-chrome-launcher": "2.2.0",
     "karma-cli": "1.0.1",
@@ -78,6 +109,7 @@
     "karma-jasmine-html-reporter": "0.2.2",
     "ng-packagr": "1.6.0",
     "ngrx-store-freeze": "^0.2.0",
+    "nyc": "^10.1.2",
     "protractor": "5.1.2",
     "ts-node": "^3.3.0",
     "tslint": "5.9.1",
