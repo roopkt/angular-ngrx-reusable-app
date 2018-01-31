@@ -15,7 +15,20 @@
     "example:start:aot": "ng serve -prod -p 4210",
     "example:test": "ng test",
     "test:lib:watch": "ng test --app=lib --browsers=Chrome",
-    "test:lib": "ng test --app=lib --browsers=ChromeHeadless -sr"
+    "test:lib": "nyc --all ng test --app=lib --browsers=ChromeHeadless -sr"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.spec",
+      "**/spec/**/*"
+    ],
+    "include": [
+      "**/*.ts",
+      "./lib/**/*.ts"
+    ]
   },
   "engines": {
     "node": ">=8.6.0",
@@ -52,6 +65,7 @@
     "@types/jasmine": "2.8.3",
     "@types/jasminewd2": "2.0.2",
     "@types/node": "^9.3.0",
+    "nyc": "^10.1.2",
     "codelyzer": "4.0.1",
     "jasmine-core": "2.8.0",
     "jasmine-node": "^1.14.5",

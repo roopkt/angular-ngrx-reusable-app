@@ -22,13 +22,15 @@ module.exports = function (config) {
       './example-app/test.ts': ['@angular/cli']
     },
     coverageIstanbulReporter: {
-      reports: [ 'html', 'lcovonly' ],
+      reports: [ 'html', 'lcovonly', 'text-summary' ],
       fixWebpackSourcePaths: true
     },
     angularCli: {
       environment: 'dev'
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: config.angularCli && config.angularCli.codeCoverage
+              ? ['progress', 'coverage-istanbul', 'kjhtml']
+              : ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
