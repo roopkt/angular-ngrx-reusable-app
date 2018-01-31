@@ -1,5 +1,5 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import * as productActions from '../actions/Product';
+import {ProductActions, ProductActionTypes} from '../actions/Product';
 import { Product } from '../models/product';
 
 export interface State extends EntityState<Product> {
@@ -28,9 +28,9 @@ export const initialState: State = adapter.getInitialState({
 });
 
 export function reducer(state = initialState,
-    action: productActions.Actions): State {
+    action: ProductActions): State {
     switch (action.type) {
-        case productActions.ADD: {
+        case ProductActionTypes.ADD: {
             return {
                 ...adapter.addOne(action.payload, state),
                 selectedProductId: state.selectedProductId
