@@ -4,18 +4,22 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build:lib1": "ng-packagr -p lib/rootstate/ngpackage.json && cd lib/rootstate/dist/packages && npm unlink && npm link",
-    "build:lib2": "ng-packagr -p lib/product-management/ngpackage.json && cd lib/product-management/dist/packages && npm unlink && npm link",
-    "build": "npm run build:lib1 && npm run build:lib2",
+    
     "example:build:prod": "npm run build && npm ng build -prod --base-href",
     "example:start": "ng serve -p 4210",
     "example:start:aot": "ng serve -prod -p 4210",
     "example:test": "ng test",
+
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+
+    "build:lib1": "ng-packagr -p lib/rootstate/ngpackage.json && cd lib/rootstate/dist/packages && npm unlink && npm link",
+    "build:lib2": "ng-packagr -p lib/product-management/ngpackage.json && cd lib/product-management/dist/packages && npm unlink && npm link",
+    "build:lib": "npm run build:lib1 && npm run build:lib2",
     "test:lib": "jest",
-    "test:lib:watch": "jest --watch"
+    "test:lib:ci": "jest --ci --testResultsProcessor=jest-junit",
+    "test:lib:watch": "jest --watch",
+    "ci":"npm run build:lib && npm run test:lib:ci"
   },
   "nyc": {
     "extension": [
@@ -56,7 +60,8 @@
     ],
     "modulePathIgnorePatterns": [
       "dist"
-    ]
+    ],
+    "testResultsProcessor": "jest-junit"
   },
   "engines": {
     "node": ">=8.6.0",
@@ -99,6 +104,7 @@
     "jasmine-node": "^1.14.5",
     "jasmine-spec-reporter": "4.2.1",
     "jest": "22.1.4",
+    "jest-junit": "^3.4.1",
     "jest-preset-angular": "5.0.0",
     "jest-zone-patch": "0.0.8",
     "karma": "2.0.0",

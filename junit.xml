@@ -1,0 +1,20 @@
+<testsuites name="jest tests">
+  <testsuite name="UtilTest" errors="0" failures="0" skipped="0" timestamp="2018-01-31T22:47:07" time="2.665" tests="1">
+    <testcase classname="UtilTest can check for null in lib project" name="UtilTest can check for null in lib project" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProductsReducer" errors="0" failures="0" skipped="0" timestamp="2018-01-31T22:47:07" time="2.619" tests="3">
+    <testcase classname="ProductsReducer undefined action should return the default state" name="ProductsReducer undefined action should return the default state" time="0.014">
+    </testcase>
+    <testcase classname="ProductsReducer ADD should add a single product" name="ProductsReducer ADD should add a single product" time="0.005">
+    </testcase>
+    <testcase classname="ProductsReducer Selectors getSelectedId should return the selected id" name="ProductsReducer Selectors getSelectedId should return the selected id" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Add Product Page" errors="0" failures="0" skipped="0" timestamp="2018-01-31T22:47:07" time="3.069" tests="2">
+    <testcase classname="Add Product Page should compile" name="Add Product Page should compile" time="0.177">
+    </testcase>
+    <testcase classname="Add Product Page should dispatch a productActions.Load on init" name="Add Product Page should dispatch a productActions.Load on init" time="0.051">
+    </testcase>
+  </testsuite>
+</testsuites>
