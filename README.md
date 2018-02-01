@@ -1,4 +1,4 @@
-# Working with multiple apps
+# Working with Reusable App
 This project is using angular cli to create angular app and trying to demonstrate how can we create our custom library and use it in example application.
 
 ## Working in lib
@@ -15,7 +15,7 @@ npm run test:lib:watch
 
 ### Building Lib
 ```
-npm run npm run build:lib
+npm run build:lib
 ```
 
 ### Creating Module in Lib
