@@ -33,6 +33,7 @@
       "root": "lib",
       "outDir": "dist",
       "name": "lib",
+      "appRoot": "product-management/src",
       "assets": [
         "assets",
         "favicon.ico"

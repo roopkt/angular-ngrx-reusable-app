@@ -19,13 +19,13 @@ export const COMPONENTS = [
     RouterModule,
     RouterModule.forChild([
       { path: '', component: AddProductContainerComponent },
-  ]),
-     /**
-     * StoreModule.forFeature is used for composing state
-     * from feature modules. These modules can be loaded
-     * eagerly or lazily and will be dynamically added to
-     * the existing state.
-     */
+    ]),
+    /**
+    * StoreModule.forFeature is used for composing state
+    * from feature modules. These modules can be loaded
+    * eagerly or lazily and will be dynamically added to
+    * the existing state.
+    */
     StoreModule.forFeature('products', reducers)
   ],
   declarations: COMPONENTS,
