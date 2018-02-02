@@ -7,28 +7,17 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch via NPM",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run-script",
-                "debug"
+            "name": "Jest Tests",
+            "program": "${workspaceRoot}\\node_modules\\jest\\bin\\jest.js",
+            "args": [
+                "-i"
             ],
-            "port": 9229
-        },
-        {
-            "type": "node",
-            "request": "attach",
-            "name": "Attach",
-            "port": 9229
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/tests.js",
+           // "preLaunchTask": "build",
+            "internalConsoleOptions": "openOnFirstSessionStart",
             "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+                "${workspaceRoot}/dist/**/*"
+            ],
+          //  "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
