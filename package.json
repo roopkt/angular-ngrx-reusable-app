@@ -14,8 +14,8 @@
     "build:lib2": "ng-packagr -p \"lib/product-management/ng-package.json\" && cd lib/product-management/dist/packages && npm unlink && npm link && cd ../../../../ && npm link @wonderful/product-management",
     "build": "npm run build:lib1 && npm run build:lib2",
     "test:lib": "jest",
+    "example:test:jest" :"jest --config=example-app/jest.config.json",
     "test": "jest --ci --testResultsProcessor=jest-junit",
-    "test:lib:debug": "node --inspect-brk --inspect ./node_modules/.bin/jest -i",
     "test:lib:watch": "jest --watch",
     "ci": "npm run build && npm run test"
   },
